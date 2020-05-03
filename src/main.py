@@ -5,7 +5,6 @@ import os
 import cnn
 import network
 import realimage
-import sys
 from UiMainWindow import Ui_MainWindow
 from UiNetworkTraining import Ui_NetworkTraining
 
@@ -161,8 +160,11 @@ def start():
 
 
 if __name__ == '__main__':
+    import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = start()
+    # window = start()
+    window = Window()
+    window.show()
     path = "../data/resources/zbuf.jpg"
     if os.path.exists(path):
         os.remove(path)
